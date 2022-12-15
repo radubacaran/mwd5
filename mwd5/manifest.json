@@ -1,0 +1,16 @@
+{
+  "domain": "mwd5",
+  "name": "MWD5 Thermostat",
+  "config_flow": false,
+  "documentation": "https://www.home-assistant.io/integrations/mwd5",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [
+    "climate"
+  ],
+  "codeowners": [
+    "@radu"
+  ]
+}
