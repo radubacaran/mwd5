@@ -10,7 +10,7 @@ import json
 HOST = "https://ocd5.azurewebsites.net:443"
 APIKEY = "f219aab4-9ac0-4343-8422-b72203e2fac9"
 USER = "your_usernname"
-PASSWORD = your_password"
+PASSWORD = "your_password"
 
 # Update frequency is secured to no spam the servers
 # and then get the account blacklisted.
