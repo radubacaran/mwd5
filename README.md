@@ -16,7 +16,8 @@ Features:
  
 
 # How to use
-- Copy the MWD5 folder in your home assistant `config/custom_components` folder
+- Copy the MWD5 folder in your home assistant `custom_components` folder
+  - example: /opt/home-assistant/custom_components/mwd5
 - Edit `climate.py` and set your username/password
    - I have used the same user/pass used in the SWATT app by OJ Electronics
    - https://play.google.com/store/apps/details?id=com.ojelectronics.owd5.r1099&hl=en&gl=US
