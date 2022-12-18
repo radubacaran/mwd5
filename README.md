@@ -8,7 +8,9 @@ Features:
 
 # Limitations
  - Thermostats must belong to zones/groups
- - Only tested with TECE branded thermostats.
+ - Confirmed to be working with thermostats branded:
+  - TECE
+  - SpeedHeat
  - Energy download not supported (since I don't use that feature)
  - API endpoint is : "https://ocd5.azurewebsites.net:443"
    - I'm mentioning this because I've seen some other endpoints used with these thermostats
