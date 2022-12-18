@@ -8,15 +8,20 @@ Features:
 
 # Limitations
  - Thermostats must belong to zones/groups
- - Only tested with TECE branded thermostats.
+ - Confirmed to be working with thermostats branded:
+   - TECE
+   - SpeedHeat
  - Energy download not supported (since I don't use that feature)
+ - The code polls the server for thermostat status once a minute
+   - using a socket implementation would be better
+ 
  - API endpoint is : "https://ocd5.azurewebsites.net:443"
-   - I'm mentioning this because I've seen some other endpoints used with this thermostats
+   - I'm mentioning this because I've seen some other endpoints used with these thermostats
  - ... Probably others
  
 
 # How to use
-- Copy the MWD5 folder in your home assistant `custom_components` folder
+- Copy the MWD5 folder to your home assistant `custom_components` folder
   - example: /opt/home-assistant/custom_components/mwd5
 - Edit `climate.py` and set your username/password
    - I have used the same user/pass used in the SWATT app by OJ Electronics
