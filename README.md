@@ -12,6 +12,9 @@ Features:
    - TECE
    - SpeedHeat
  - Energy download not supported (since I don't use that feature)
+ - The code polls the server for thermostat status once a minute
+   - using a socket implementation would be better
+ 
  - API endpoint is : "https://ocd5.azurewebsites.net:443"
    - I'm mentioning this because I've seen some other endpoints used with these thermostats
  - ... Probably others
