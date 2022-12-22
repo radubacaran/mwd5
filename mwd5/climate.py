@@ -6,6 +6,9 @@ import time
 import requests
 import json
 
+# Alternative host suggested here:
+# https://community.home-assistant.io/t/mwd5-wifi-thermostat-oj-electronics-microtemp/445601/52
+#  HOST = "https://owd5-sl003-app.ojelectronics.com/"
 
 HOST = "https://ocd5.azurewebsites.net:443"
 APIKEY = "f219aab4-9ac0-4343-8422-b72203e2fac9"
@@ -20,6 +23,14 @@ UPDATE_RATE_SEC = 1 * 60
 # the heating will be ON for this amount of time
 # 120 is an offset to deal with some strange TZ handling.
 BOOST_TIME = 120 + 30
+
+# List of potential customer IDs
+CUST_ID_SCHLUTER_DITRA = 3
+CUST_ID_TECE = 99
+# CUST_ID_MICROTEMP = 111 // TBC
+
+# Default customer ID
+CUST_ID = CUST_ID_TECE
 
 
 class MWD5(object):
@@ -71,7 +82,7 @@ class MWD5(object):
             "APIKEY": APIKEY,
             "UserName": user,
             "Password": psw,
-            "CustomerId": "99",
+            "CustomerId": str(CUST_ID),
             "ClientSWVersion": "1060",
         }
         r = requests.post(HOST + path, data)
@@ -103,7 +114,7 @@ class MWD5(object):
             "ThermostatID": thermo_id,
             "SetThermostat": {
                 "AdaptiveMode": True,
-                "CustomerId": 99,
+                "CustomerId": CUST_ID,
                 "DaylightSaving": True,
                 "DaylightSavingActive": False,
                 "Id": int(thermo_id),
